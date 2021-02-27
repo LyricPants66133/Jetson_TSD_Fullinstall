@@ -20,8 +20,16 @@ sudo apt-get upgrade -y
 # Install docker-compose
 sudo pipenv install docker-compose --skip-lock
 
+# Get TSD Repo
 cd ..
 
 git clone https://github.com/TheSpaghettiDetective/TheSpaghettiDetective
-# # add docker-compose.override.yml files
-# python3 ....
+
+# add docker-compose.override.yml files
+
+sudo python3 override_file_writer.py
+
+# Clean up unneeded files
+
+sudo rm -r Jetson_TSD_Fullinstall
+
