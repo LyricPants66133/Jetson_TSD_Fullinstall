@@ -20,8 +20,7 @@ sudo apt-get upgrade -y
 # Install docker-compose
 sudo pipenv install docker-compose --skip-lock
 
+cd ..
+
 # # add docker-compose.override.yml files
 # python3 ....
-
-# # restart jetson to make sure evrything is installed
-# sudo reboot 
