@@ -11,14 +11,13 @@ sudo apt-get install python-pip -y
 sudo apt-get install curl python3-pip libffi-dev python-openssl libssl-dev zlib1g-dev gcc g++ make -y
 
 python -m pip install --upgrade pip setuptools wheel
-sudo python -m pip install pipenv # MUST BE SUDO, otherwise the command will not be recognized by bash
 
 # Make sure all packages previously downloaded are up to date
 sudo apt-get update -y
 sudo apt-get upgrade -y
 
 # Install docker-compose
-sudo pipenv install docker-compose --skip-lock
+sudo python -m pip install docker-compose
 
 # Get TSD Repo
 cd ..
@@ -34,7 +33,6 @@ cd ..
 sudo rm -r Jetson_TSD_Fullinstall
 
 # Start the TSD Server!
-pipenv shell
 cd TheSpaghettiDetective
 sudo docker-compose up -d
 
