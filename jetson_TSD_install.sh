@@ -33,3 +33,6 @@ sudo python3 override_file_writer.py
 
 sudo rm -r Jetson_TSD_Fullinstall
 
+# Run docker on startup
+
+sudo systemctl enable docker
