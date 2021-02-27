@@ -26,12 +26,17 @@ cd ..
 git clone https://github.com/TheSpaghettiDetective/TheSpaghettiDetective
 
 # add docker-compose.override.yml files
-
+cd Jetson_TSD_Fullinstall
 sudo python3 override_file_writer.py
 
 # Clean up unneeded files
-
+cd ..
 sudo rm -r Jetson_TSD_Fullinstall
+
+# Start the TSD Server!
+pipenv shell
+cd TheSpaghettiDetective
+sudo docker-compose up -d
 
 # Run docker on startup
 
