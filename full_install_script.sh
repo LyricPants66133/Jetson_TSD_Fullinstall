@@ -22,5 +22,6 @@ sudo pipenv install docker-compose --skip-lock
 
 cd ..
 
+git clone https://github.com/TheSpaghettiDetective/TheSpaghettiDetective
 # # add docker-compose.override.yml files
 # python3 ....
