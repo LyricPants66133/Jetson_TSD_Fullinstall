@@ -20,8 +20,6 @@ sudo apt-get upgrade -y
 sudo python -m pip install docker-compose
 
 # Get TSD Repo
-cd ..
-
 git clone https://github.com/TheSpaghettiDetective/TheSpaghettiDetective
 
 # add docker-compose.override.yml files
@@ -37,5 +35,4 @@ cd TheSpaghettiDetective
 sudo docker-compose up -d
 
 # Run docker on startup
-
 sudo systemctl enable docker
