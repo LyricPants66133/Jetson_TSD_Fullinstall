@@ -23,10 +23,12 @@ sudo python -m pip install docker-compose
 git clone https://github.com/TheSpaghettiDetective/TheSpaghettiDetective
 
 # add docker-compose.override.yml files
-cd Jetson_TSD_Fullinstall
-sudo python3 override_file_writer.py
+mv Jetson_TSD_Fullinstall/override_file_writer.py TheSpaghettiDetective
+cd TheSpaghettiDetective
+python3 override_file_writer.py
 
 # Clean up unneeded files
+sudo rm -r override_file_writer.py
 cd ..
 sudo rm -r Jetson_TSD_Fullinstall
 
