@@ -19,6 +19,9 @@ sudo apt-get upgrade -y
 # Install docker-compose
 sudo python -m pip install docker-compose
 
+# Get TSD Repo
+git clone https://github.com/TheSpaghettiDetective/TheSpaghettiDetective
+
 # add docker-compose.override.yml files
 mv Jetson_TSD_Fullinstall/override_file_writer.py TheSpaghettiDetective
 cd TheSpaghettiDetective
