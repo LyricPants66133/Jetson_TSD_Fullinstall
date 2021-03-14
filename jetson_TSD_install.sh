@@ -3,12 +3,10 @@ sudo apt-get update -y
 sudo apt-get upgrade -y
 
 # Install prerequisites
-sudo apt-get install python -y
-sudo apt-get install python3 -y
-sudo apt-get install python-pip -y
+sudo apt-get install python python3 python-pip python3-pip -y
 
  #I have no clue which of these libraries is actually needed to install pyNaCl.
-sudo apt-get install curl python3-pip libffi-dev python-openssl libssl-dev zlib1g-dev gcc g++ make -y
+sudo apt-get install curl libffi-dev python-openssl libssl-dev zlib1g-dev gcc g++ make -y
 
 python -m pip install --upgrade pip setuptools wheel
 
