@@ -1,21 +1,16 @@
-f = open('docker-compose.override.yml', "w+")
-f.write("""
-version: '2.4'
+import requests
 
-services:
-  ml_api:
-    build:
-      context: ml_api
-    environment:
-        HAS_GPU: 'True'
-    runtime: nvidia
-""")
+dockerComposeMain = requests.get('https://raw.githubusercontent.com/LyricPants66133/Jetson_TSD_fullinstall/main-docker-compose.yml')
+f = open('docker-compose.yml', "w")
+f.write(dockerComposeMain.text)
 f.close
 
-f = open('web/docker-compose.override.yml', "w+")
-f.write("FROM raymondh2/web:aarch64")
+dockerComposeWeb = requests.get('https://raw.githubusercontent.com/LyricPants66133/Jetson_TSD_fullinstall/web-docker-compose.override.yml')
+f = open('web/docker-compose.override.yml', "w")
+f.write(dockerComposeWeb)
 f.close
 
-f = open('ml_api/docker-compose.override.yml', "w+")
-f.write("FROM raymondh2/ml_api:jetson")
+dockerComposeMl_api = requests.get('https://raw.githubusercontent.com/LyricPants66133/Jetson_TSD_fullinstall/ml_api-docker-compose.override.yml')
+f = open('ml_api/docker-compose.override.yml', "w")
+f.write(dockerComposeMl_api)
 f.close
